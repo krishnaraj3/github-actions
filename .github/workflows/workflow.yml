@@ -2,13 +2,13 @@ name: To create github action pipeline
 
 on:
   push:
-       branches: [ "actions_test_1", "actions_test_2" ]
+      branches: [ "actions_test_1", "develop" ]
   pull_request:
-       branches: [ "main" ]
+      branches: [ "main" ]
 
   workflow_dispatch: 
 
-  jobs:
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
