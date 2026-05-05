@@ -1,0 +1,23 @@
+name: To create github action pipeline 
+
+on:
+  push:
+       branches: [ "actions_test_1", "actions_test_2" ]
+  pull_request:
+       branches: [ "main" ]
+
+  workflow_dispatch: 
+
+  jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Print single line script as step 1
+        run: echo Hello, world!
+        
+      - name: Print multi line script as step 2
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
