@@ -19,7 +19,12 @@ jobs:
       - name: Install dependencies for alphine image
         run: |
           apk add --no-cache coreutils
+          apk add lsb-release
+          echo " Which user you are ? "
           whoami
+          echo " Your OS type ?"
+          cat /etc/os-release
+
       - name: Print single line script as step 1
         run: echo Hello, world!
         
