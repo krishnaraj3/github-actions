@@ -11,9 +11,15 @@ on:
 jobs:
   first-job:
     runs-on: ubuntu-latest
+    container: 
+      image: alphine:3.19
     steps:
       - uses: actions/checkout@v4
-      
+
+      - name: Install dependencies for alphine image
+        run: |
+          apk add --no-cache coreutils
+          whoiam 
       - name: Print single line script as step 1
         run: echo Hello, world!
         
