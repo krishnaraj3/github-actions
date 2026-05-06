@@ -20,6 +20,6 @@ jobs:
       - name: Print multi line script as step 2
         run: |
           echo "Listing all files in the github repository"
-          ls -lt
+          ls -lta
           echo "Add other actions to build,"
           echo "test, and deploy your project."
