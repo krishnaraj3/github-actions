@@ -12,7 +12,7 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     container: 
-      image: alphine:3.19
+      image: alpine:3.19
     steps:
       - uses: actions/checkout@v4
 
