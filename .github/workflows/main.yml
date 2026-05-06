@@ -1,4 +1,4 @@
-name: To create github action pipeline 
+name: First Github Workflow
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  build:
+  first-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,5 +19,7 @@ jobs:
         
       - name: Print multi line script as step 2
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "Listing all files in the github repository"
+          ls -lt
+          echo "Add other actions to build,"
+          echo "test, and deploy your project."
