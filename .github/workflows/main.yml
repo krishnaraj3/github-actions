@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies for alphine image
         run: |
           apk add --no-cache coreutils
-          whoiam 
+          whoami
       - name: Print single line script as step 1
         run: echo Hello, world!
         
